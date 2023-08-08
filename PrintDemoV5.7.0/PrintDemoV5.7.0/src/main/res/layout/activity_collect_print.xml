@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/ll_header_picture"
+        layout="@layout/heardview_layout" />
+
+    <TextView
+        android:id="@+id/tv_show_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_header_picture"
+        android:layout_margin="10dp"
+        android:text="@string/tv_show_msg"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_show_is_notifacation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_show_msg"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="是否开启追加并采集"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_is_notifacation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_show_is_notifacation"
+        android:layout_below="@+id/tv_show_is_notifacation"
+        android:orientation="horizontal"
+        android:textColor="#ffffff" >
+
+        <RadioButton
+            android:id="@+id/yes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="开启" />
+
+        <RadioButton
+            android:id="@+id/no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="不开启" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/tv_show_is_service_setable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rg_is_notifacation"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:text="是否允许服务端配置"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_is_service_setable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignLeft="@+id/tv_show_is_notifacation"
+        android:layout_below="@+id/tv_show_is_service_setable"
+        android:orientation="horizontal"
+        android:textColor="#ffffff" >
+
+        <RadioButton
+            android:id="@+id/rb_allow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="允许" />
+
+        <RadioButton
+            android:id="@+id/rb_not_allow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="不允许" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_show_collect_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rg_is_service_setable"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="展示采集到的一单数据："
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/et_collect_data"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/tv_show_collect_data"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:scrollbars="vertical"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="serverurl">http://123.124.21.78:980/AndroidPrintDemoAPKUpdate/updateinfo.json</string>
+</resources>
